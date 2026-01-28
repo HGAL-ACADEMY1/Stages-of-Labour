@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stages of Labour - HGAL Academy</title>
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Merriweather for the lecture text -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CORE THEME & RESET --- */
+        body {
+            background-color: #121212; /* Deep charcoal/black */
+            background-image: linear-gradient(180deg, #121212 0%, #1a1b1e 100%);
+            color: #E5E7EB; /* High contrast off-white */
+            font-family: 'Merriweather', serif;
+            font-size: 20px; /* Base size, scaled up in classes */
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- SCROLL PROGRESS BAR --- */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 50;
+        }
+        #progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4ade80, #3b82f6); /* Green to Blue gradient */
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        /* --- TYPOGRAPHY UTILS --- */
+        .lecture-text {
+            font-size: 22px; /* Large readable text */
+        }
+        
+        @media (min-width: 768px) {
+            .lecture-text {
+                font-size: 26px; /* Requested size for desktop */
+            }
+        }
+
+        h1, h2, h3 {
+            color: #ffffff;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .highlight {
+            color: #60a5fa; /* Soft Blue for emphasis */
+            font-weight: 700;
+        }
+
+        .term {
+            color: #fbbf24; /* Amber for definitions */
+            font-style: italic;
+        }
+
+        .warning {
+            color: #f87171; /* Soft Red for warnings */
+        }
+
+        /* --- ANIMATIONS --- */
+        /* The "Pop" Effect on scroll */
+        .reveal-text {
+            opacity: 0;
+            transform: translateY(30px) scale(0.98);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .reveal-text.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Button Pulse */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+        
+        .vip-btn {
+            animation: pulse-glow 2s infinite;
+        }
+
+        /* --- LAYOUT UTILS --- */
+        .chat-container {
+            max-width: 700px; /* WhatsApp/Mobile readable width */
+            margin: 0 auto;
+            padding: 20px;
+            padding-bottom: 100px;
+        }
+
+        /* Custom list styling to look like chat points */
+        ul.custom-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul.custom-list li {
+            position: relative;
+            padding-left: 1.5em;
+            margin-bottom: 0.8em;
+        }
+        ul.custom-list li::before {
+            content: "•";
+            color: #60a5fa;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -0.2em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div class="chat-container">
+        
+        <!-- Header / Logo -->
+        <header class="text-center mb-12 pt-8 reveal-text">
+            <img src="https://i.imgur.com/eP0BFrd.png" alt="HGAL Academy Logo" class="mx-auto w-48 md:w-64 h-auto drop-shadow-2xl">
+        </header>
+
+        <!-- Main Lecture Content -->
+        <main class="lecture-text text-gray-200 space-y-8">
+
+            <!-- Intro -->
+            <div class="reveal-text">
+                <p>Hello there! 👋 Today, we are going to take a journey through one of the most fascinating processes in biology—childbirth. We are going to look at the <strong>Stages of Labour</strong>.</p>
+                <p>Imagine this as a story with four distinct chapters. I’ll break it down step-by-step so you can visualize exactly what happens.</p>
+            </div>
+
+            <div class="reveal-text">
+                <h2 class="text-3xl md:text-4xl text-blue-400 mb-6">The First Stage</h2>
+                <p>Let’s begin with <span class="highlight">The First Stage</span>. Think of this as the "opening up" phase.</p>
+                <p>Technically, we define this as the period from the onset of <strong>true, regular uterine contractions</strong> until the full dilatation of the cervical Os.</p>
+                <p>In simple terms? 🚪 It’s the time from when the labour pains really start until the door (the cervix) is fully open for the baby to come out. This stage is actually divided into two phases.</p>
+            </div>
+
+            <!-- Latent Phase -->
+            <div class="reveal-text">
+                <h3 class="text-2xl text-yellow-300 mt-8">1. The Latent Phase</h3>
+                <p>This is the slow start. It’s the period <em>before</em> things get very active. It starts from the spontaneous onset of labour until the cervix is about <span class="highlight">3 to 4cm dilated</span>.</p>
+                <p>During this time, the cervix also shortens—going from about 3cm long down to 0.5cm long. 📏</p>
+                <p>⏱️ <strong>How long does it last?</strong><br>
+                For a first-time mother (Primip), it might last <strong>6 to 8 hours</strong>. However, for mothers who have given birth before (Multiparous), it is usually much shorter.</p>
+                <p>📉 <em>Note:</em> If you looked at a "partogram" (a chart used to track labour), the line remains horizontal during this phase because things are moving slowly.</p>
+            </div>
+
+            <!-- Active Phase -->
+            <div class="reveal-text">
+                <h3 class="text-2xl text-green-400 mt-8">2. The Active Phase</h3>
+                <p>Okay, let’s move on to when things speed up! 🚀</p>
+                <p>This is the period from <span class="highlight">3-4cm up to 10cm dilatation</span>. The cervix undergoes much more rapid dilatation, opening at a rate of about <strong>1cm per hour</strong>.</p>
+                <p>On the chart, the line now rises rapidly. This usually lasts <strong>2 to 6 hours</strong>, but again, it’s faster for women who have given birth before.</p>
+            </div>
+
+            <!-- Transition to Stage 2 -->
+            <div class="reveal-text mt-12 mb-8 p-4 border-l-4 border-blue-500 bg-gray-800 bg-opacity-30 rounded-r-lg">
+                <p class="text-xl italic">Okay, now that the door is fully open (10cm dilated), let's talk about getting the baby out.</p>
+            </div>
+
+            <!-- Second Stage -->
+            <div class="reveal-text">
+                <h2 class="text-3xl md:text-4xl text-blue-400 mb-6">The Second Stage</h2>
+                <p>This is the stage of <strong>Expulsion of the Foetus</strong>. 👶</p>
+                <p>It starts from the moment of full dilatation of the cervix <em>and</em> the urge to push, and it ends when the foetus is completely expelled from the mother's body.</p>
+            </div>
+
+            <!-- Third Stage -->
+            <div class="reveal-text">
+                <h2 class="text-3xl md:text-4xl text-blue-400 mb-6">The Third Stage</h2>
+                <p>Next, we look at what happens immediately after the baby is born. This stage is all about the <span class="highlight">Placenta</span>.</p>
+                <p>This is the period of separation and expulsion of the placenta and membranes, and the control of bleeding. 🩸</p>
+                <p>So, it lasts from the birth of the baby until the delivery of the placenta. Interestingly, the duration of this stage is <strong>not affected by parity</strong> (meaning it doesn't matter if it's the first baby or the fifth, this stage takes about the same time).</p>
+            </div>
+
+            <!-- Fourth Stage -->
+            <div class="reveal-text">
+                <h2 class="text-3xl md:text-4xl text-blue-400 mb-6">The Fourth Stage</h2>
+                <p>You might think, "Wait, isn't it over?" Not quite! 🛑</p>
+                <p>The Fourth Stage is the <strong>first one hour following the birth of the placenta</strong>. It is actually the very first hour of the <em>puerperium</em>.</p>
+                <p>Why do we give this hour its own stage? To emphasize the importance of <strong>continuous vigilance</strong>. We need to watch the woman closely for the risk of Post Partum Haemorrhage (heavy bleeding). Just like the third stage, this timeline is not affected by how many babies she has had.</p>
+            </div>
+
+            <!-- Transition to Duration -->
+            <div class="reveal-text mt-12 mb-8">
+                <p class="text-xl">Let's now dive into the numbers. How long does all of this actually take?</p>
+            </div>
+
+            <!-- Duration of Labour -->
+            <div class="reveal-text">
+                <h2 class="text-3xl md:text-4xl text-blue-400 mb-6">Duration of Labour</h2>
+                <p>There are wide variations here. The length of labour is influenced by many things:</p>
+                <ul class="custom-list mt-4 ml-4">
+                    <li>Parity (number of previous births)</li>
+                    <li>Time of the last delivery</li>
+                    <li>Type of pelvis</li>
+                    <li>Size and presentation of the foetus</li>
+                    <li>Strength and frequency of uterine contractions</li>
+                </ul>
+                <p>Generally, the greatest part of labour is taken up by the <strong>First Stage</strong>. But remember, the most important thing is simply that labour <em>progresses</em>, provided the woman is comfortable and the baby is well.</p>
+                <p>Labour lasts longer in <strong>Primigravidae</strong> (first-time moms) than in <strong>Multigravidae</strong> (experienced moms). Let's look at the average breakdown:</p>
+            </div>
+
+            <!-- Time Breakdown Visualization -->
+            <div class="reveal-text bg-gray-800 bg-opacity-50 p-6 rounded-2xl my-6 border border-gray-700">
+                <h3 class="text-xl text-yellow-400 mb-4">👩 First-Time Mom (Primigravida)</h3>
+                <p><strong>1st Stage:</strong> 8-12 hours<br>
+                <strong>2nd Stage:</strong> 30-60 mins<br>
+                <strong>3rd Stage:</strong> 5-15 mins</p>
+                <p class="mt-2 text-green-300"><strong>Average Total:</strong> ~12 Hours</p>
+                
+                <h3 class="text-xl text-yellow-400 mt-6 mb-4">👩‍👧‍👦 Experienced Mom (Multipara)</h3>
+                <p><strong>1st Stage:</strong> 6 ½ - 8 hours<br>
+                <strong>2nd Stage:</strong> 15-30 mins<br>
+                <strong>3rd Stage:</strong> 5-15 mins</p>
+                <p class="mt-2 text-green-300"><strong>Average Total:</strong> ~7 Hours</p>
+            </div>
+
+            <div class="reveal-text">
+                <p>💡 <strong>Did you know?</strong> Evidence has shown that the use of <em>Oxytocin</em> and <em>one-to-one care</em> has reduced the period of labour considerably.</p>
+            </div>
+
+            <!-- Calculation Section -->
+            <div class="reveal-text">
+                <h2 class="text-3xl md:text-4xl text-blue-400 mb-6">How to Calculate Duration</h2>
+                <p>Let’s try a practical example together so you can see how the math works. 🧮</p>
+                <p><strong>The Scenario:</strong><br>
+                Date: 12/6/2008<br>
+                Labour begins: <strong>12:30 a.m.</strong><br>
+                OS fully dilated: <strong>7:15 a.m.</strong><br>
+                Baby delivered: <strong>7:25 a.m.</strong><br>
+                Placenta delivered: <strong>7:33 a.m.</strong></p>
+                
+                <p class="mt-4"><strong>The Calculation:</strong></p>
+                <ul class="custom-list">
+                    <li><strong>1st Stage:</strong> 12:30 a.m. to 7:15 a.m. = <span class="highlight">6 hrs 45 mins</span></li>
+                    <li><strong>2nd Stage:</strong> 7:15 a.m. to 7:25 a.m. = <span class="highlight">10 mins</span></li>
+                    <li><strong>3rd Stage:</strong> 7:25 a.m. to 7:33 a.m. = <span class="highlight">8 mins</span></li>
+                </ul>
+                <p class="text-xl font-bold mt-4 text-green-400">TOTAL DURATION = 7 hrs 3 mins</p>
+            </div>
+
+            <!-- Transition to Management -->
+            <div class="reveal-text mt-12 mb-8">
+                <p class="text-xl">Now that we understand the timing, let's talk about care. Specifically, how do we handle the pain?</p>
+            </div>
+
+            <!-- Management Section -->
+            <div class="reveal-text">
+                <h2 class="text-3xl md:text-4xl text-blue-400 mb-6">Management of First Stage: Pain Relief</h2>
+                <p>Pain is tricky. It is not possible to assess <em>exactly</em> how much pain a person is feeling because pain cannot be objectively measured. It's subjective.</p>
+                <p>However, we know that pain leads to physical and emotional exhaustion and lessens the woman’s confidence. Since the pain threshold varies from person to person, the woman in labour <strong>must</strong> be relieved from pain, while ensuring the baby's safety.</p>
+                
+                <h3 class="text-2xl text-gray-300 mt-6">What causes the pain?</h3>
+                <p>In labour, pain is caused by uterine contractions, dilatation of the cervix, and the stretching of the vagina and pelvic floor muscles (especially in the late 1st and 2nd stage).</p>
+                <p>⚡ These pains are transmitted by the thoracic, lumbar, and sacral nerves.</p>
+            </div>
+
+            <!-- Methods of Relief -->
+            <div class="reveal-text">
+                <h2 class="text-3xl md:text-4xl text-blue-400 mb-6">Methods of Pain Relief</h2>
+                
+                <h3 class="text-2xl text-pink-400 mt-6">1. Psychological Method</h3>
+                <p>This is arguably the <strong>most important aspect</strong>. 🧠</p>
+                <p>A woman who is scared or apprehensive will feel more pain. If she is admitted into a clean, well-organized, calm, and reassuring environment, she will relax. The midwife must be sympathetic and understanding. </p>
+                <p>The midwife's personality should reflect kindness. This includes:</p>
+                <ul class="custom-list ml-4">
+                    <li>Giving information as necessary.</li>
+                    <li>Allaying anxiety.</li>
+                    <li>Participating in planning and care.</li>
+                    <li>Giving physical care.</li>
+                </ul>
+            </div>
+
+            <div class="reveal-text">
+                <h3 class="text-2xl text-pink-400 mt-8">2. The Use of Drugs (Chemotherapy)</h3>
+                <p>Midwives use various drugs to relieve pain, allay apprehension, or induce sleep. 💊</p>
+                <p>A small dose of a narcotic might act as a sedative, while a large dose of a tranquilizer might act as a hypnotic. The midwife must understand the underlying principles! Success depends on the right drug, the right dose, and proper timing.</p>
+                
+                <p class="mt-4"><span class="term">Analgesics:</span> Drugs supposed to relieve pain without knocking the patient out (e.g., Panadol, Aspirin, Fortral).</p>
+                
+                <p class="mt-4"><span class="term">Narcotics:</span> Strong analgesics that allay anxiety and induce sleep (e.g., Pethidine, Morphine, Pethilorfan, Tramal).</p>
+                
+                <p class="mt-4"><span class="term">Hypnotics:</span> These induce sleep and act as anti-convulsants (e.g., Chloral hydrate, Diazepam, Omnopon, Paraldehyde).</p>
+                
+                <p class="mt-4"><span class="term">Tranquillizers:</span> These calm the patient (e.g., Phenergan).</p>
+                
+                <p class="mt-4"><span class="term">Sedatives:</span> These induce sleep (e.g., Barbiturate groups).</p>
+            </div>
+
+            <div class="reveal-text bg-gray-800 p-6 rounded-xl border-l-4 border-purple-500 mt-8">
+                <h4 class="text-xl text-purple-300 font-bold mb-2">🍹 The Lytic Cocktail</h4>
+                <p>This refers to a mixture usually given intravenously (IV). It is a mix of phenothiazine derivatives and Pethidine.</p>
+                <p><strong>Example Recipe:</strong><br>
+                Chlorpromazine (Largactil) 50mg + Promethazine (Phenergan) 50mg + Pethidine 100mg.</p>
+                <p>It is mixed and given slowly until the patient enters a state of sedation, tranquility, and analgesia (ataralgesia).</p>
+                <p><strong>Uses:</strong> Treatment of pre-eclampsia/eclampsia, forceps deliveries, breech deliveries, and C-sections.</p>
+            </div>
+
+            <div class="reveal-text">
+                <h3 class="text-2xl text-pink-400 mt-8">3. Inhalational Analgesia</h3>
+                <p>Permitted by the Midwife Board for healthy women in the late first stage or second stage. These are volatile agents excreted quickly by the body. 💨</p>
+                <p><strong>Entonox:</strong> Pre-mixed Nitrous Oxide (50%) and Oxygen (50%).</p>
+                <p><strong>Trilene (Trichloroethylene):</strong> A blue liquid that evaporates into a non-inflammable vapour. It is administered using an <em>Emotril Automatic Inhaler</em>.</p>
+            </div>
+
+            <div class="reveal-text">
+                <h3 class="text-2xl text-pink-400 mt-8">4. Obstetric Anaesthesia</h3>
+                <p>Anaesthesia means the absence of sensation. There are three main types used:</p>
+                <ul class="custom-list ml-4">
+                    <li><strong>General Anaesthesia:</strong> Total unconsciousness.</li>
+                    <li><strong>Regional Anaesthesia:</strong> Numbing a large region (e.g., Epidural, Spinal).</li>
+                    <li><strong>Local Anaesthesia:</strong> Numbing a small specific area (e.g., Lignocaine).</li>
+                </ul>
+            </div>
+
+            <div class="reveal-text">
+                <p>Let's look at the specific regional/local types briefly:</p>
+                
+                <p class="mt-4">💉 <strong>Spinal Anaesthesia:</strong> Local anaesthetic is injected into the subarachnoid space (into the CSF).</p>
+                
+                <p class="mt-4">💉 <strong>Pudendal Block:</strong> Injected adjacent to the pudendal nerves (just below the ischial spines). This numbs the pelvic floor, vulva, and perineum.</p>
+                
+                <p class="mt-4">💉 <strong>Paracervical Block:</strong> This blocks the paracervical plexus. Used in prolonged labour. 10mls of 1% lignocaine is injected into the lateral fornices. <span class="warning">⚠️ Warning:</span> It reduces backache but there is a risk of bradycardia (slow heart rate) and foetal death due to spasm of uterine vessels.</p>
+                
+                <p class="mt-4">💉 <strong>Local Anaesthesia:</strong> 10mls of 0.5% Lignocaine infiltrated into the perineum, often used for episiotomy.</p>
+            </div>
+
+            <!-- CONCLUSION & VIP OFFER -->
+            <div class="reveal-text mt-16 pt-8">
+                <p>That brings us to the end of our lecture on the Stages of Labour and Pain Management. I hope this breakdown helps you visualize the incredible process of birth!</p>
+                
+                <p class="mt-8 text-xl font-medium text-green-400">
+                    Join our VIP if you're yet to, for more study materials and other bonuses (worth #115,000).
+                </p>
+                <p class="mt-2 text-gray-300">For more details click below</p>
+                <p class="text-3xl my-2">👇</p>
+                
+                <div class="mt-6 mb-12">
+                    <a href="https://tinyurl.com/2dbtvx2b" target="_blank" class="vip-btn inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-12 rounded-full text-xl transition transform hover:scale-105 no-underline">
+                        click Here
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Javascript for Animations and Scroll Progress -->
+    <script>
+        // Scroll Progress Bar Logic
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        // Scroll "Pop" Animation Logic
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: Stop observing once revealed
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.reveal-text');
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+  </html>
